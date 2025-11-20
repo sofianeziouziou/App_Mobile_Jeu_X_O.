@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Jeu X-O</string>
+    <string name="rules_text">Le jeu X-O se joue sur une grille 3x3. Deux joueurs: X et O. Aligner 3 symboles gagne. Le tournoi contient plusieurs parties.</string>
+</resources>
