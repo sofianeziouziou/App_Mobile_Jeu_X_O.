@@ -1,125 +1,245 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main">
+
     <LinearLayout
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="20dp"
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Choisir symbole:"
-            android:textSize="16sp" />
-        <RadioGroup
-            android:id="@+id/rgSymbol"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <RadioButton
-                android:id="@+id/rbX"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="X" />
-            <RadioButton
-                android:id="@+id/rbO"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="O" />
-        </RadioGroup>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Nombre de parties:"
-            android:textSize="16sp" />
-        <RadioGroup
-            android:id="@+id/rgNbGames"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <RadioButton
-                android:id="@+id/rb5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5" />
-            <RadioButton
-                android:id="@+id/rb10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10" />
-            <RadioButton android:id="@+id/rb15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="15" />
-        </RadioGroup>
-        <TextView
-            android:layout_marginTop="16dp"
-            android:text="Mode de jeu:"
-            android:textSize="16sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <RadioGroup
-            android:id="@+id/rgMode"
-            android:orientation="vertical"
+
+        <!-- Card 1: Choix du symbole -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <RadioButton
-                android:id="@+id/rbLocal"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:text="Choisir symbole"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Local (2 joueurs)" />
-            <RadioButton
-                android:id="@+id/rbAI"
+                android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                android:id="@+id/rgSymbol"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Contre l'ordinateur" />
-        </RadioGroup>
-        <TextView
-            android:layout_marginTop="8dp"
-            android:text="Niveau IA:"
-            android:textSize="14sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <RadioGroup
-            android:id="@+id/rgAiLevel"
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <RadioButton
-                android:id="@+id/rbEasy"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="X"
+                    android:textColor="#FFFFFF"/>
+
+                <RadioButton
+                    android:id="@+id/rbO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="O"
+                    android:textColor="#FFFFFF"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Card 2: Nb parties -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:text="Nombre de parties"
+                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Easy" />
-            <RadioButton
-                android:id="@+id/rbMedium"
+                android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                android:id="@+id/rgNbGames"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Medium" />
-            <RadioButton
-                android:id="@+id/rbHard"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textColor="#FFFFFF"/>
+
+                <RadioButton
+                    android:id="@+id/rb10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textColor="#FFFFFF"/>
+
+                <RadioButton
+                    android:id="@+id/rb15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"
+                    android:textColor="#FFFFFF"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Card 3: Mode -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:text="Mode de jeu"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hard" />
-        </RadioGroup>
+                android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                android:id="@+id/rgMode"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbLocal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Local (2 joueurs)"
+                    android:textColor="#FFFFFF"/>
+
+                <RadioButton
+                    android:id="@+id/rbAI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contre l'ordinateur"
+                    android:textColor="#FFFFFF"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Card 4: IA Level -->
+        <LinearLayout
+            android:id="@+id/cardAiLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:text="Niveau IA"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                android:id="@+id/rgAiLevel"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbEasy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Easy"
+                    android:textColor="#FFFFFF"/>
+
+                <RadioButton
+                    android:id="@+id/rbMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medium"
+                    android:textColor="#FFFFFF"/>
+
+                <RadioButton
+                    android:id="@+id/rbHard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hard"
+                    android:textColor="#FFFFFF"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Buttons -->
         <Button
             android:id="@+id/btnPlay"
-            style="@style/Button.Rounded"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/btn_modern"
             android:text="Jouer"
-            android:layout_marginTop="16dp" />
+            android:textStyle="bold"
+            android:textColor="#4A90E2"
+            android:layout_marginTop="25dp"
+            android:padding="12dp" />
+
         <Button
             android:id="@+id/btnRules"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/btn_modern"
             android:text="Principe du jeu"
-            android:layout_marginTop="8dp" />
+            android:textColor="#4A90E2"
+            android:layout_marginTop="10dp"
+            android:padding="12dp"/>
+
         <Button
             android:id="@+id/btnLoad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Retrouver les scores du dernier tournoi"
-            android:layout_marginTop="8dp" />
+            android:background="@drawable/btn_modern"
+            android:text="Dernier tournoi"
+            android:textColor="#4A90E2"
+            android:layout_marginTop="10dp"
+            android:padding="12dp"/>
+
+        <Button
+            android:id="@+id/btnHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_modern"
+            android:text="Historique"
+            android:textColor="#4A90E2"
+            android:layout_marginTop="10dp"
+            android:padding="12dp"/>
+
+        <!-- Bouton Déconnexion -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_logout"
+            android:text="Déconnexion"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:padding="12dp"/>
+
     </LinearLayout>
 </ScrollView>

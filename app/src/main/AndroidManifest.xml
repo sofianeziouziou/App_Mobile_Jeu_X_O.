@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jeu_x_o">
 
@@ -9,19 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JeuXO">
         <activity
-            android:name=".ResultActivity"
+            android:name=".historique.HistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".GameActivity"
+            android:name=".login.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".model.ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".game.GameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.MainActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
